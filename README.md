@@ -1,5 +1,5 @@
 # Metis Classification Module
-<hr>
+<hr></hr>
 This repository was created as a project for metis, to learn different classification models and their appropriate metrics. I chose to use public data available on NYC.gov to try and predict if a taxi ride will result in a tip or not
 <br><br>
 # Description of Jupyter Notebooks
@@ -20,3 +20,32 @@ New York City being one of the worlds most populated cities. Taxi cabs pull in o
 # Data
 <hr></hr>
 Originally I hoped to use a full year of data for this projcet, but I underestimated how large and challenging the data was. Yellow cars alone for the 2019 calendar year had 83 million observations. The data set was bout 9GB. For Hire vehicles (such as Uber) also had to be removed from the classification. While they do have data online, they do not report on the features I used to build my model. For these reasons, I built a model using just yellow and green taxi data from January of 2019. When  trying to one-hot-encode all categorical features, the dataset had 5.9 million observations and 606 features. This caused both kernal crashes and computer crashes, so zone features were removed(specific regions like Astoria or Midtown). After this edit, features dropped to 86.<br>
+# Alogithms
+<hr></hr>
+Feature Enginering included creating new columns from datetime columns such as day of week, week of month, and hour of day. The data frames came with numerical location IDs, so a second data frame was merged to obtain Borough information from those ID numbers. This was done for both yellow and green taxi dataframes separately, then concatenated together. Following the concatenation, categorical data was one-hot-encoded to produce a total of 86 features.
+<br>
+Several different modeling methods were used for baseline metrics. I chose to follow through with Logistic Regression, as the coefficients help with interpretability, which was part of my goal.
+Baseline scores:
+<ul>
+  <li>Precision: 99%</li>
+  <li>Accuracy: 99%</li>
+  <li>Log-loss: .012</li>
+  <li>False Positives on test set: 1,112</li>
+</ul>
+After Tuning:
+<ul>
+  <li>Precision:</li>
+  <li>Accuracy:</li>
+  <li>Log-loss:</li>
+  <li>False Positives on test set:</li>
+
+</ul>
+<br>
+# Tools
+<hr></hr>
+Pandas and Numpy were used for data aggregation and cleaning.
+SciKit-Learn was used for all modeling types
+Seaborn was used for visualizations
+
+
+
