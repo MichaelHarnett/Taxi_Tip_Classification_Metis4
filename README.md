@@ -34,10 +34,10 @@ Baseline scores:
 </ul>
 After Tuning:
 <ul>
-  <li>Precision:</li>
-  <li>Accuracy:</li>
-  <li>Log-loss:</li>
-  <li>False Positives on test set:</li>
+  <li>Precision:99%</li>
+  <li>Accuracy:99%</li>
+  <li>Log-loss:2.5</li>
+  <li>False Positives on test set:99</li>
 
 </ul>
 <br>
